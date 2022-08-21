@@ -6,31 +6,587 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <style>
+        .progress {
+            height: 4px;
+        }
+
+        .female {
+            background-color: #3399ff;
+        }
+
+        .male {
+            background-color: #e55353;
+        }
+
+        .dot::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: #e55353;
+            position: absolute;
+            border-radius: 50%;
+            bottom: 40%;
+            right: 25%;
+            z-index: 5;
+
+        }
+
+        .dot-parent {
+            position: relative;
+        }
+    </style>
 </head>
 
 <body>
-    <nav>
-        <div class="container">
-            <div class="col"><button>
-                    <span class="nav"></span>
-                </button>
-                <ul>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">User</a></li>
-                    <li><a href="">Settings</a></li>
+
+    <header class="header header-sticky ">
+        <nav class="navbar navbar-expand-lg bg-light ">
+            <div class="d-flex">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-left"><i
+                        class="bi bi-list"></i></button>
+                <ul class="navbar-nav navbar-collapse collapse">
+                    <li class="nav-item"><a href="#dashboard" class="nav-link">Dashboard</a></li>
+                    <li class="nav-item"><a href="#users" class="nav-link">Users</a></li>
+                    <li class="nav-item"><a href="#setting" class="nav-link">Settings</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="col">
+            <div class="d-flex ms-auto">
+                <div class="btn-group  ">
+                    <button class="btn btn-sm btn-primary "><i class="bi bi-brightness-high flex-grow-0"></i></button>
+                    <button class="btn btn-sm btn-primary flex-grow-0"><i
+                            class="bi bi-moon-fill flex-grow-0"></i></button>
+                </div>
+                <ul class="navbar-nav mx-3 navbar-collapse collapse">
+                    <li class="nav-item position-relative"><i class="bi bi-bell nav-link my-1 mx-2"></i><span
+                            class="badge bg-danger text-black rounded-pill position-absolute top-0 end-0">5</span></li>
+                    <li class="nav-item position-relative"><i class="bi bi-list-task nav-link my-1 mx-2"></i><span
+                            class="badge bg-warning rounded-pill text-black position-absolute top-0 end-0">5</span></li>
+                    <li class="nav-item position-relative"><i class="bi bi-envelope-open nav-link my-1 mx-2"></i><span
+                            class="badge bg-info rounded-pill  text-black position-absolute top-0 end-0">7</span></li>
+                </ul>
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-right"><i
+                        class="bi bi-three-dots-vertical"></i></button>
 
+            </div>
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-end" id="offcanvas-right">
+        <div class="offcanvas-header">
+            <ul>
+                <li></li>
+            </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-    </nav>
+        <div class="offcanvas-body"></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col m-3  bg-primary rounded ">
+                <img src="" alt="">
+                <p class="mt-0 position-relative"><strong class="fs-3">26K</strong> (12.4% <i
+                        class="bi bi-arrow-down"></i>)<i
+                        class="bi bi-three-dots-vertical position-absolute top-0 end-0"></i></p>
+                <p>Users</p>
+            </div>
+            <div class="col m-3 bg-warning rounded ">
+                <img src="" alt="">
+                <p class="m-0 position-relative"><strong class="fs-3">$6,200</strong> (40.9% <i
+                        class="bi bi-arrow-up"></i>)<i
+                        class="bi bi-three-dots-vertical position-absolute top-0 end-0"></i></p>
+                <p>Income</p>
+            </div>
+            <div class="col m-3  bg-warning rounded ">
+                <img src="" alt="">
+                <p class="m-0 position-relative"><strong class="fs-3">2.49%</strong> (87.7% <i
+                        class="bi bi-arrow-up"></i>)<i
+                        class="bi bi-three-dots-vertical position-absolute top-0 end-0"></i></p>
+                <p>Conversion Rate</p>
+            </div>
+            <div class="col m-3  bg-danger rounded  ">
+                <img src="" alt="">
+                <p class="m-0 position-relative"><strong class="fs-3">44K</strong> (-23.6% <i
+                        class="bi bi-arrow-down"></i>)<i
+                        class="bi bi-three-dots-vertical position-absolute top-0 end-0"></i></p>
+                <p>Sessions</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col border m-2 p-3 rounded">
+                <img src="" alt="facebook" class="img-fluid">
+                <div class="row">
+                    <div class="col text-center">
+                        <h5>81K</h5>
+                        <p>FRIENDS</p>
+                    </div>|
+                    <div class="col text-center">
+                        <h5>495</h5>
+                        <p>FEED</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col rounded border m-2 p-3">
+                <img src="" alt="twitter">
+                <div class="row">
+                    <div class="col text-center">
+                        <h5>973K</h5>
+                        <p>FOLLOWERS</p>
+                    </div>|
+                    <div class="col text-center">
+                        <h5>1.762</h5>
+                        <p>TWEETS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col border rounded m-2 p-3">
+                <img src="" alt="linkedIn">
+                <div class="row ">
+                    <div class="col text-center">
+                        <h5>500+</h5>
+                        <p>CONTACTS</p>
+                    </div>|
+                    <div class="col text-center">
+                        <h5>292</h5>
+                        <p>FEED</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------ traffic sales --------------------->
+    <div class="container mb-3">
+        <div class="card">
+            <div class="card-header">Traffic & sales</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col border-bottom mx-2">
+                        <div class="row">
+                            <div class="col border-start border-3 border-primary px-2 my-2">
+                                <p class="my-0 py-0 text-muted">New Clients
+                                </p>
+                                <h5>9.123</h5>
+                            </div>
+                            <div class="col border-start border-3 border-danger px-2 my-2">
+                                <p class="my-0 py-0 text-muted">Recuring Clients
+                                </p>
+                                <h5>22.643</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col border-bottom mx-2">
+                        <div class="row">
+                            <div class="col border-start border-3 border-warning px-2 my-2">
+                                <p class="my-0 py-0 text-muted">Pageviews</p>
+                                <h5>78.623</h5>
+                            </div>
+                            <div class="col border-start border-3 border-success px-2 my-2">
+                                <p class="my-0 py-0 text-muted">Organic
+                                </p>
+                                <h5>49.123</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="row">
+                            <div class="col mt-3 align-items-space-between">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Monday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1">
+                                            <div class="progress-bar  female" style="width: 42%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 22%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-2">
+                                        <p>Tuseday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1">
+                                            <div class="progress-bar  female" style="width: 69%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 62%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Wednesday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1 ">
+                                            <div class="progress-bar  female" style="width: 62%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 46%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Thursday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1 ">
+                                            <div class="progress-bar  female" style="width: 78%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 53%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ">
+                                    <div class="col-2">
+                                        <p>Friday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1 ">
+                                            <div class="progress-bar  female" style="width: 47%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 62%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2 ">
+                                        <p>Saturday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1 ">
+                                            <div class="progress-bar  female " style="width: 62%;" role="progressbar"
+                                                aria-valuenow="62" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 67%;" aria-label="Success"
+                                                role="progressbar" aria-valuenow="67" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p>Sunday</p>
+                                    </div>
+                                    <div class="col">
+                                        <div class="progress mb-1 ">
+                                            <div class="progress-bar  female" style="width: 98%;" role="progressbar"
+                                                aria-label="Success " aria-valuenow="98" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar male" style="width: 45%;" role="progressbar"
+                                                aria-label="Basic example" aria-valuenow="45" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col  ">
+                                <div class="row py-0 mx-0 my-2">
+                                    <p class="position-relative py-0 my-0"><i class="bi bi-person"></i>Male<span
+                                            class="position-absolute end-0">43%</span>
+                                    </p>
+                                    <div class="progress my-0 p-0">
+                                        <div class="progress-bar bg-warning" style="width: 43%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="row py-0 mx-0 my-2">
+                                    <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>Female <span
+                                            class="position-absolute end-0">37%</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 37%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="row py-0 mt-5 mx-0">
+                                    <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>Organic
+                                        Search<span class="position-absolute end-0">191.322 (56%)</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 37%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="row py-0 mx-0 my-2">
+                                    <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>Facebook<span
+                                            class="position-absolute end-0">51.476 (15%)</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 37%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="row py-0 my-2 mx-0">
+                                    <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>Twitter<span
+                                            class="position-absolute end-0">37.107 (11%)</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 37%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="row py-0 mx-0 my-2">
+                                    <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>LinkedIn<span
+                                            class="position-absolute end-0">27.142 (8%)</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 37%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class=" row py-0 mt-3 mx-0 border">
+                    <table class="table">
+                        <thead>
+                            <tr class="bg-light">
+                                <th scope="col"><i class="bi bi-people-fill"></i></th>
+                                <th scope="col-2">User</th>
+                                <th scope="col">Country</th>
+                                <th scope="col">Usage</th>
+                                <th scope="col">Payment Method</th>
+                                <th scope="col">Activity</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><img src="" alt="user" width="40px" class="rounded-circle"></th>
+                                <td>
+                                    <p class="py-0 my-0">Yiorgos Avraamu</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>America</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">50% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  bg-success" style="width: 50%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2">MasterCard</td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>10 sec ago</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="" alt="user" width="40px" class="rounded-circle"></th>
+                                <td>
+                                    <p class="py-0 my-0">Avram Tarasios</p>
+                                    <p class="text-muted py-0 my-0">Recurring | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>Brazil</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">10% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  male" style="width: 10%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2">Visa</td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>5 minutes ago</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dot-parent text-center">
+                                    <div class="dot"><img src="./commenter1.jpg" alt="user" width="40px"
+                                            class="rounded-circle  img-fluid"></div>
+                                </th>
+                                <td>
+                                    <p class="py-0 my-0">Quintin Ed</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>INDIA</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">74% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  bg-warning" style="width: 74%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2"><i class="fa fa-cc-stripe" aria-hidden="true"></i></td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>1 hour ago</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr class="my-0 py-0">
+                                <th scope="row" class="dot-parent text-center">
+                                    <div class="dot"><img src="./commenter1.jpg" alt="user" width="40px"
+                                            class="rounded-circle"></div>
+                                </th>
+                                <td>
+                                    <p class="py-0 my-0">Enéas Kwadwo</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>Flag</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">98% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  bg-danger" style="width: 98%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2"><i class="fa fa-paypal" aria-hidden="true"></i></td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>Last month</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><img src="" alt="user" width="40px" class="rounded-circle"></th>
+                                <td>
+                                    <p class="py-0 my-0">Yiorgos Avraamu</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>Flag</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">50% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  bg-success" style="width: 0%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2">Visa</td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>10 sec ago</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dot-parent text-center"><div class="dot"><img src="./commenter1.jpg" alt="user" width="40px" class="rounded-circle"></div></th>
+                                <td>
+                                    <p class="py-0 my-0">Agapetus Tadeáš</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>Flag</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">22% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  female" style="width: 22%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2">Visa</td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>Last week</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="dot-parent text-center"><div class="dot" ><img src="./commenter1.jpg" alt="user" width="40px" class="rounded-circle"></div></th>
+                                <td>
+                                    <p class="py-0 my-0">Friderik Dávid</p>
+                                    <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
+                                </td>
+                                <td>Flag</td>
+                                <td class="col-3">
+                                    <p class="position-relative py-0 my-0">43% <span
+                                            class="position-absolute end-0 text-muted">Jun
+                                            11, 2020 - Jul 10, 2020</span></p>
+                                    <div class="progress p-0">
+                                        <div class="progress-bar  bg-success" style="width: 43%;" role="progressbar"
+                                            aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
+                                            aria-valuemax="100"></div>
+                                    </div>
+                                </td>
+                                <td class="text-center col-2">Visa</td>
+                                <td>
+                                    <p class="py-0 my-0">Last login</p>
+                                    <p>Yesterday</p>
+                                </td>
+                                <td class="text-center align-items-center"><i
+                                        class="bi bi-three-dots-vertical fs-4"></i></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    
 </body>
 
 </html>
