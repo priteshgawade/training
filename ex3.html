@@ -43,7 +43,7 @@
 </head>
 
 <body>
-
+    <!-- Header -->
     <header class="header header-sticky ">
         <nav class="navbar navbar-expand-lg bg-light ">
             <div class="d-flex">
@@ -75,6 +75,7 @@
             </div>
         </nav>
     </header>
+    <!-- Sidebar right -->
     <div class="offcanvas offcanvas-end" id="offcanvas-right">
         <div class="offcanvas-header">
             <ul>
@@ -84,6 +85,7 @@
         </div>
         <div class="offcanvas-body"></div>
     </div>
+    <!-- Cards for  Users, Income, Conversion Rate, Sessions  -->
     <div class="container">
         <div class="row">
             <div class="col m-3  bg-primary rounded ">
@@ -116,7 +118,9 @@
             </div>
         </div>
     </div>
+    <!-- Social Media Stats Cards -->
     <div class="container">
+        <!-- Facebook -->
         <div class="row justify-content-center">
             <div class="col border m-2 p-3 rounded">
                 <img src="" alt="facebook" class="img-fluid">
@@ -124,34 +128,36 @@
                     <div class="col text-center">
                         <h5>81K</h5>
                         <p>FRIENDS</p>
-                    </div>|
-                    <div class="col text-center">
+                    </div>
+                    <div class="col text-center border-start">
                         <h5>495</h5>
                         <p>FEED</p>
                     </div>
                 </div>
             </div>
+            <!-- Twitter -->
             <div class="col rounded border m-2 p-3">
                 <img src="" alt="twitter">
                 <div class="row">
                     <div class="col text-center">
                         <h5>973K</h5>
                         <p>FOLLOWERS</p>
-                    </div>|
-                    <div class="col text-center">
+                    </div>
+                    <div class="col text-center border-start">
                         <h5>1.762</h5>
                         <p>TWEETS</p>
                     </div>
                 </div>
             </div>
+            <!-- LinkedIn -->
             <div class="col border rounded m-2 p-3">
                 <img src="" alt="linkedIn">
                 <div class="row ">
                     <div class="col text-center">
                         <h5>500+</h5>
                         <p>CONTACTS</p>
-                    </div>|
-                    <div class="col text-center">
+                    </div>
+                    <div class="col text-center border-start">
                         <h5>292</h5>
                         <p>FEED</p>
                     </div>
@@ -165,6 +171,7 @@
             <div class="card-header">Traffic & sales</div>
             <div class="card-body">
                 <div class="row">
+                    <!-- Traffic Col 1 -->
                     <div class="col border-bottom mx-2">
                         <div class="row">
                             <div class="col border-start border-3 border-primary px-2 my-2">
@@ -179,6 +186,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Traffic Col 2-->
                     <div class="col border-bottom mx-2">
                         <div class="row">
                             <div class="col border-start border-3 border-warning px-2 my-2">
@@ -193,10 +201,12 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col">
                         <div class="row">
                             <div class="col mt-3 align-items-space-between">
+                                <!-- Days Stats -->
                                 <div class="row">
                                     <div class="col-2">
                                         <p>Monday</p>
@@ -316,6 +326,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Stats Based on Gender -->
                             <div class="col  ">
                                 <div class="row py-0 mx-0 my-2">
                                     <p class="position-relative py-0 my-0"><i class="bi bi-person"></i>Male<span
@@ -336,6 +347,7 @@
                                             aria-valuemax="100"></div>
                                     </div>
                                 </div>
+                                <!-- Stats Based on Platforms -->
                                 <div class="row py-0 mt-5 mx-0">
                                     <p class="position-relative py-0 my-0"> <i class="bi bi-person"></i>Organic
                                         Search<span class="position-absolute end-0">191.322 (56%)</span></p>
@@ -377,6 +389,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Table of Users -->
                 <div class=" row py-0 mt-3 mx-0 border">
                     <table class="table">
                         <thead>
@@ -523,7 +536,10 @@
                                         class="bi bi-three-dots-vertical fs-4"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row" class="dot-parent text-center"><div class="dot"><img src="./commenter1.jpg" alt="user" width="40px" class="rounded-circle"></div></th>
+                                <th scope="row" class="dot-parent text-center">
+                                    <div class="dot"><img src="./commenter1.jpg" alt="user" width="40px"
+                                            class="rounded-circle"></div>
+                                </th>
                                 <td>
                                     <p class="py-0 my-0">Agapetus Tadeáš</p>
                                     <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
@@ -548,7 +564,10 @@
                                         class="bi bi-three-dots-vertical fs-4"></i></td>
                             </tr>
                             <tr>
-                                <th scope="row" class="dot-parent text-center"><div class="dot" ><img src="./commenter1.jpg" alt="user" width="40px" class="rounded-circle"></div></th>
+                                <th scope="row" class="dot-parent text-center">
+                                    <div class="dot"><img src="./commenter1.jpg" alt="user" width="40px"
+                                            class="rounded-circle"></div>
+                                </th>
                                 <td>
                                     <p class="py-0 my-0">Friderik Dávid</p>
                                     <p class="text-muted py-0 my-0">New | Registered: Jan 1, 2020</p>
@@ -586,7 +605,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    
+
 </body>
 
 </html>
