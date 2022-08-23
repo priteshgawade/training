@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-1 my-5"><button type="button" class="btn btn-outline-primary" data-bs-target="#mygallery"
+                    data-bs-toggle="modal">View</button></div>
+        </div>
+    </div>
+    <div class="modal" id="mygallery">
+        <div class="modal-dialog modal-dialog-centered modal-lg ">
+            <div class="modal-content">
+
+                <!-- modal header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">My Gallery</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+
+                <!-- modal body -->
+                <div class="modal-body">
+                    <div class="container d-flex justify-content-center bg-black">
+                        <div class="col-8 ">
+                            <div class="carousel carousel-fade" id="carouselExampleIndicators" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="0" class="active" aria-current="true"
+                                        aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                    <button type="button" data-bs-target="#carouselExampleIndicators"
+                                        data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                </div>
+                                <div class="carousel-inner align-content-center align-items-center">
+                                    <div
+                                        class="carousel-item  active d-flex justify-content-center align-content-center bg-dark">
+                                        <img src="./tom-winckels-I7oLRdM9YIw-unsplash.jpg" class="img-fluid w-100"
+                                            alt="">
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center bg-dark">
+                                        <img src="./nathan-watson-a4Goc6z9eQs-unsplash.jpg" class=" img-fluid " alt="">
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center bg-dark">
+                                        <img src="./tom-podmore-3CksK6QSk2I-unsplash.jpg" class="img-fluid  " alt="">
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center bg-dark">
+                                        <img src="./benjamin-davies-Zm2n2O7Fph4-unsplash.jpg" class="   img-fluid"
+                                            alt="">
+                                    </div>
+                                    <div
+                                        class="carousel-item d-flex justify-content-center align-content-center bg-dark">
+                                        <img src="./steve-douglas-3WZ3VnXvVJ4-unsplash.jpg" class="w-100  img-fluid"
+                                            alt="">
+                                    </div>
+                                    <div class="carousel-item d-flex justify-content-center bg-dark">
+                                        <img src="./philip-oroni-7h27XzY7CtM-unsplash.jpg" class="  img-fluid" alt="">
+                                    </div>
+                                    <div
+                                        class="carousel-item d-flex justify-content-center  align-content-center bg-dark">
+                                        <img src="./fabian-quintero-UWQP2mh5YJI-unsplash.jpg" class="img-fluid" alt="">
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev " type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="false"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next " type="button"
+                                    data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="false"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- modal footer -->
+                    <div class="modal-footer"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

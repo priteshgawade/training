@@ -1,0 +1,24 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li{
+    text-align: center;
+    padding: 10px;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+ul{
+    
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+@media (min-width: 320px) and (max-width:520px){
+    ul{
+        flex-direction: column;
+        align-content: space-around;
+        margin-top: 0;
+    }
+}

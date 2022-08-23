@@ -1,0 +1,28 @@
+.left{
+    width: 30%;
+    background-color: aquamarine;
+}
+.right{
+    width: 60%;
+    background-color: rgb(240, 255, 127);
+}
+h1{
+    text-align: center;
+    font-size: 30px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:500px) {
+    .container{
+        flex-direction: column;
+    }
+    .left,.right{
+        width: 100%;
+    }
+    .right{
+        margin-top: 20px;
+        height: 100vh;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div>
+            <input type="text" name="screen" id="display" value="">
+        </div>
+
+        <div class="operations">
+            <div class=" row">
+                <button class="controls" onclick="del();">DEL</button>
+                <button class="controls" onclick="clr();">AC</button>
+                <button class="controls evaluate" onclick="solve();">=</button>
+
+            </div>
+            <div class="row">
+                <button class="num_key" onclick="" value="7">7</button>
+                <button class="num_key" onclick="" value="8">8</button>
+                <button class="num_key" onclick="" value="9">9</button>
+                <button class="operator_key" onclick="" value="+">+</button>
+            </div>
+            <div class="row">
+                <button class="num_key" onclick="" value="4">4</button>
+                <button class="num_key" onclick="" value="5">5</button>
+                <button class="num_key" onclick="" value="6">6</button>
+                <button class="operator_key">-</button>
+            </div>
+            <div class="row">
+                <button class="num_key" onclick="" value="1">1</button>
+                <button class="num_key" onclick="" value="2">2</button>
+                <button class="num_key" onclick="" value="3">3</button>
+                <button class="operator_key" onclick="">*</button>
+            </div>
+
+
+
+            <div class="row">
+                <button class="num_key" onclick="" value=".">.</button>
+                <button class="num_key zero" onclick="" value="0">0</button>
+                <button class="operator_key divide" onclick="">/</button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

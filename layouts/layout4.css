@@ -1,0 +1,41 @@
+.A{
+    width: 100%;
+}
+.A,.B,.C,.D,.E{
+    height: 200px;
+    margin: 15px;
+    color: #fff;
+    background-color: rgb(15, 13, 13);
+}
+h1{
+    color: #ffffff;
+    text-align: center;
+}
+.B,.D{
+    width: 60%;
+    flex-grow: 1;
+}
+.E,.C{
+    width: 20%;
+    flex-grow: 1;
+}
+.container{
+    display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+}
+.E{
+    order: 1;
+}
+@media (max-width:500px) {
+    .container{
+    flex-wrap: wrap;
+    }
+    .A,.B,.E{
+        width: 100%;
+    }
+    .C,.D{
+        width: 39%;
+    }
+    
+}
