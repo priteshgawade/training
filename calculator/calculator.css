@@ -36,7 +36,9 @@ input {
     flex-grow: 1;
 
 }
-
+button:active{
+    box-shadow: 0px 0px 10px #a161f7 !important;
+}
 
 .evaluate{
     background-color: #a161f7;
