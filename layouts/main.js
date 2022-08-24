@@ -18,4 +18,5 @@ function menu() {
       document.querySelector('.menu-icon i').classList.replace('bx-menu','bx-x');
       document.getElementById('menu').style.display = 'block';
     }
+
   }

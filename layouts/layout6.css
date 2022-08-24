@@ -80,3 +80,10 @@ a {
     }
 
 }
+
+@media (max-width:1001px){
+    .menu{
+        display: block;
+    }
+
+}

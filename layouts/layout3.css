@@ -1,9 +1,20 @@
 .left{
+     display: flex;
+    justify-content: center;
+    flex-direction: column;
     width: 30%;
+    flex-shrink: 0;
+    height: 900px;
     background-color: aquamarine;
 }
 .right{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 900px;
     width: 60%;
+    flex-grow: 1;
+    margin-left: 10px;
     background-color: rgb(240, 255, 127);
 }
 h1{
@@ -12,7 +23,8 @@ h1{
 }
 .container{
     display: flex;
-    justify-content: space-between;
+    align-self: start;
+    
 }
 @media (max-width:500px) {
     .container{
@@ -20,9 +32,11 @@ h1{
     }
     .left,.right{
         width: 100%;
+        height: auto;
     }
     .right{
         margin-top: 20px;
-        height: 100vh;
+        margin-left: auto;
+        /* height: 100vh; */
     }
 }

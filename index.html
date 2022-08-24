@@ -6,39 +6,113 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Training Report</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&family=Work+Sans&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
-    <div>
-        <p>Portfolio Excercise</p>
-        <p><a href="https://priteshgawade.github.io/jobani/" target="_blank">Portfolio</a></p>
-    </div>
+<style>
+    h1 {
+        text-align: center;
+        background-color: #e3ab44;
+        /* width: 100%; */
+        margin: 0;
+        padding: 10px;
+        color: #298f37;
+        font-family: "Poppins";
+        font-size: 2rem;
+    }
 
-    <div>
-        <p>Figma Layouts Excercise</p>
-        <ol class="layout">
-            <li><a href="./layouts/layout1.html">Layout 1</a></li>
-            <li><a href="./layouts/layout2.html">Layout 2</a></li>
-            <li><a href="./layouts/layout3.html">Layout 3</a></li>
-            <li><a href="./layouts/layout4.html">Layout 4</a></li>
-            <li><a href="./layouts/layout5.html">Layout 5</a></li>
-            <li><a href="./layouts/layout6.html">Layout 6</a></li>
-        </ol>
-    </div>
-    <div>
-        <p>Bootstrap Excercise</p>
-        <ol>
-            <li><a href="./excersice.html">Bootstrap excercise 1</a></li>
-            <li><a href="./excercise2.html">Bootstrap excercise 2</a></li>
-            <li><a href="./excercise5.html">Bootstrap excercise 3</a></li>
-            <li>Website build using Bootstrap<a href="./websites/WBS_1/index.html"> hippo&crate.com</a></li>
-        </ol>
-    </div>
-    <div>
-        <p>Calculator</p>
-        <ol>
-            <li><a href="./calculator/index.html"></a></li>
-        </ol>
+    .heading {
+        padding: 5px 20px;
+        background-color: #29308f;
+        color: #ffffff;
+        font-family: "Work Sans";
+        /* width: 25%; */
+    }
+
+    div {
+        background-color: #75236E;
+        padding: 5px;
+        margin: 0px 10px;
+    }
+
+    li {
+        margin-top: 5px;
+    }
+
+    a {
+        color: #ffffff;
+        font-family: "Roboto";
+        text-decoration: none;
+        
+    }
+
+    .container {
+        background-color: #6A687D;
+        margin: 0;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .website-text {
+        color: #ffffff;
+        font-family: "Roboto";
+    }
+
+    .hippo-crate{
+        color: #000;
+        text-decoration: none;
+        font-size: 1.2rem;
+    }
+    #portfolio{
+        margin-left: 10px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1>Training Excercise</h1>
+        <div class="main">
+            <div>
+                <p class="heading">Portfolio Excercise</p>
+                <p><a href="https://priteshgawade.github.io/jobani/" target="_blank" id="portfolio">Portfolio</a></p>
+            </div>
+
+            <div>
+                <p class="heading">Figma Layouts Excercise</p>
+                <ol class="layout">
+                    <li><a href="./layouts/layout1.html">Layout 1</a></li>
+                    <li><a href="./layouts/layout2.html">Layout 2</a></li>
+                    <li><a href="./layouts/layout3.html">Layout 3</a></li>
+                    <li><a href="./layouts/layout4.html">Layout 4</a></li>
+                    <li><a href="./layouts/layout5.html">Layout 5</a></li>
+                    <li><a href="./layouts/layout6.html">Layout 6</a></li>
+                </ol>
+            </div>
+            <div>
+                <p class="heading">Bootstrap Excercise</p>
+                <ol>
+                    <li><a href="./excersice.html">Bootstrap excercise 1</a></li>
+                    <li><a href="./excercise2.html">Bootstrap excercise 2</a></li>
+                    <li><a href="./excercise5.html">Bootstrap excercise 3</a></li>
+                    <li><span class="website-text">Website build using Bootstrap</span><a
+                            href="./websites/WBS_1/index.html"> <span class="hippo-crate">hippo-crate.com</span></a>
+                    </li>
+                </ol>
+            </div>
+            <div>
+                <p class="heading">Calculator</p>
+                <ol>
+                    <li><a href="./calculator/index.html">Basic Calculator</a></li>
+                </ol>
+            </div>
+        </div>
     </div>
 </body>
 
