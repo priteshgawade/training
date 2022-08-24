@@ -7,7 +7,7 @@ display.value = '';
 
 function solve() {
     try {
-        display.value = eval(display.value);
+        if (display.value != '') { display.value = eval(display.value); }
     }
     catch {
         display.value = 'Fromat Error'

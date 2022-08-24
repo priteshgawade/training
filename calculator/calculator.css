@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
 
-*{
-    font-family: 'Roboto','Poppins', sans-serif;
+* {
+    font-family: 'Roboto', 'Poppins', sans-serif;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +23,8 @@ body{
     flex-grow: 1;
     box-shadow: 0px 0px 5px #7f9096;
 }
-div{
+
+div {
     position: relative;
 }
 
@@ -34,13 +36,22 @@ input {
     font-size: 1.5rem;
     border: none;
     flex-grow: 1;
+    color: #ffffff;
+    background-color: #7f9096;
+    caret-color: transparent;
+    border: none;
 
 }
-button:active{
+
+button:active {
     box-shadow: 0px 0px 10px #a161f7 !important;
 }
+input:focus{
+    border: none;
+}
 
-.evaluate{
+
+.evaluate {
     background-color: #a161f7;
 }
 
@@ -54,7 +65,7 @@ button:active{
     justify-content: center;
 }
 
-.operations{
+.operations {
     margin-top: 10px;
 }
 
@@ -65,7 +76,7 @@ button:active{
     font-size: 1.5rem;
     border-radius: 10%;
     margin: 5px;
-    width: 60px;
+    width: 3.75rem;
     border: none;
     box-shadow: 0px 0px 5px #7f9096;
     /* flex-grow: 1; */
@@ -87,7 +98,7 @@ button:active{
 }
 
 .container {
-    width: 350px;
+    width: 21rem;
     padding: 20px;
     /* margin: 10% 40%; */
 
