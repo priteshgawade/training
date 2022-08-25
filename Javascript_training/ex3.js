@@ -22,7 +22,8 @@ function personalAccount() {
 
     // Returnus information of Account holder
     function accountinfo() {
-        return console.log(`Name: ${firstname} ${lastname}`)
+        v=`Name: ${firstname} ${lastname}`;
+        return v
     }
 
     // Returnus Current balance of Account holder
@@ -43,3 +44,5 @@ console.log(PA.TotalIncome)
 console.log(PA.TotalExpense)
 console.log(PA.AccountInfo)
 console.log(PA.AccountBalance)
+
+
