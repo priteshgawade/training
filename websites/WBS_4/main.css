@@ -5,6 +5,9 @@
     font-family: 'Poppins', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
 }
+:root{
+    --border-color: lightgray;
+}
 .header{
     height:50px;
     width: 100%;
@@ -79,7 +82,7 @@ li{
 .step{
     width: 120px;
     height: auto;
-    border: 2px solid #78889b;
+    border: 2px solid var(--border-color);
     border-width: 0 0 0 2px;
     padding: auto 10px;
     text-align: center;
@@ -102,11 +105,11 @@ li{
 .sidebar{
     position: fixed;
     left: 0;
-    width: 50px;
+    max-width: 55px;
     height: calc(100vh - 50px);
     background-color: #ffffff;
     color: #78889b;
-    border:1px solid #78889b;
+    border:1px solid var(--border-color);
     border-width: 0 1px 0 0;
     /* float: left; */
 }
@@ -125,13 +128,14 @@ li{
 }
 .main-content{
     width: 100%;
+    margin-left: 50px;
 }
 .content{
     padding: 15px;
 }
 .dashboard-navbar{
     /* width: 100%; */
-    border:1px solid #78889b;
+    border:1px solid  var(--border-color);
     border-width: 0 0px 1px 0;
     padding: 12px 0px 12px 12px ;
 }
@@ -181,21 +185,12 @@ i{
 .dashboard:active{
     color: #ff7043;
 }
-.active-btn{
+/* .active-btn{
     color: #ff7043;
-}
-button:hover{
+} */
+/* button:hover{
  color: #ff7043;
  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-/* .sb-btn::after{
-    content: "";
-    width: 7px;
-    height: 100%;
-    display: block;
-    margin-left: -10px;
-    color: #ff7043;
-
 } */
 .cards{
     display: flex;
@@ -254,4 +249,9 @@ button:hover{
 }
 .card4{
     border: none;
+}
+.active{
+    border: 3px solid #ff7043;
+    border-width: 0 4px 0 0;
+    color: #ff7043;
 }
