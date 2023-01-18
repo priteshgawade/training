@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Fraunces', serif; */
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+.sidebar{
+    position: fixed;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #042331;
+
+}
